@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<dialogue>
+  <npcname>Басист</npcname>   <!--Имя перса который говорит реплику-->
+    <node>
+      <nodeid> 0 </nodeid> <!--Номер нода, для удобства-->
+      <npcspritelink>Sprite1</npcspritelink> <!--Имя спрайта из папки Assets/Resources/Sprites-->
+      <audiolink>Audio1</audiolink> <!--Имя аудио из папки Assets/Resources/Audio-->
+      <npctext> Йо, давно не видились, чел! </npctext> <!--Реплика нпс в ответ на реплику гг-->
+          <answers>
+            <answer tonode ="1"> <!--После выбора этого ответа следующие варианты ответа будут из нода ниже, т.е. нода 1-->
+              <text> Йо, че каво братишка? </text>
+            </answer>
+            <answer tonode ="2">
+              <text> Даров, ты какой-то мутный седня. </text>
+            </answer>
+            <answer tonode ="0"> <!--0 нод это конец диалога. Все следующие ноды скипаются-->
+              <text> Передумал говорить, покеда. </text>
+              <dialend>true</dialend> <!--Для окончания диалога не забудь указать этот тег!!-->
+            </answer>
+          </answers>
+    </node>
+    <node>
+      <nodeid> 1 </nodeid>
+      <npcspritelink>Sprite2</npcspritelink>
+      <audiolink>Audio2</audiolink> 
+      <npctext> Да вот чет решил с лейблом затусить </npctext>
+          <answers>
+            <answer tonode ="2">
+              <text> Рил ты мутный, давай пока. </text>
+            </answer>
+            <answer tonode ="0">
+              <text> Нам с тобой не по пути </text>
+              <dialend>true</dialend>
+            </answer>
+          </answers>
+    </node>
+    <node>
+      <nodeid> 2 </nodeid>
+      <npcspritelink>Sprite1</npcspritelink>
+      <audiolink>Audio1</audiolink> 
+      <npctext> Лан, бывай! </npctext>
+        <answers>
+          <answer tonode ="0">
+            <text> Увидимся, бро! </text>
+            <dialend>true</dialend>
+          </answer>
+          <answer tonode ="0">
+            <text> Надеюсь, больше не пересечемся... </text>
+            <dialend>true</dialend>
+          </answer>
+          <answer tonode ="3">
+            <text> Переход на тест монологов </text>
+          </answer>
+        </answers>
+    </node>
+  <node>
+    <nodeid> 3 </nodeid>
+    <npcspritelink>Sprite3</npcspritelink>
+    <audiolink>Audio2</audiolink> 
+    <npctext> Нод для теста монолога 1 </npctext>
+    <answers>
+      <answer tonode ="4">
+        <text> Далее</text>
+      </answer>
+    </answers>
+  </node>
+  <node>
+    <nodeid> 4 </nodeid>
+    <npcspritelink>Sprite1</npcspritelink>
+    <audiolink>Audio2</audiolink>
+    <npctext> Нод для теста монолога 2 </npctext>
+    <answers>
+      <answer tonode ="5">
+        <text>Далее</text>
+      </answer>
+    </answers>
+  </node>
+ <node>
+    <nodeid> 5 </nodeid>
+    <npcspritelink>Sprite2</npcspritelink>
+    <audiolink>Audio2</audiolink>
+    <npctext> Нод для теста монолога 3 </npctext>
+    <answers>
+      <answer tonode ="0">
+        <text>Далее</text>
+        <dialend>true</dialend>
+      </answer>
+    </answers>
+  </node>
+</dialogue>
